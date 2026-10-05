@@ -26,6 +26,7 @@ So that I can see, which movies I already watched.
 As a user,
 I want to be able to delete movies,
 So that I can clean up my library.
+-> Responsibility: Ryan
 
 
 # Searching/Sorting/Display
@@ -41,10 +42,12 @@ So that I can search for them by name, genre, rating.
 As a user,
 I want to be able to sort the movies by genre, name and rating,
 So that I can search for them by name, genre, rating.
+-> Responsibility: Ryan
 
 As a user,
 I want to be able to see the ratings of the movies in the library,
 So that I can see my preferences.
+-> Responsibility: Ryan
 
 As a user,
 I want to be able to watch a random movie from the library that the program suggests,
