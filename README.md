@@ -5,11 +5,13 @@
 # Adding/Modifying/Deleting Data
 As a user
 I want to add movies to the library,
-So that I can watch them up later.
+So that I can watch them later.
+-> Responsibility: Kiran
 
 As a user,
 I want to be able to categorize the movies by genre,
 So that I can search for them by genre.
+-> Responsibility: Kiran
 
 As a user,
 I want to be able to rate the movies,
@@ -48,6 +50,7 @@ So that I don’t have to search for one.
 As a user,
 I want to get a movie suggestion by a genre that I provide,
 So that I don’t have to search the library myself.
+-> Responsibility: Kiran
 
 As a user,
 I want to be able to display all the movies I haven’t watched yet,
