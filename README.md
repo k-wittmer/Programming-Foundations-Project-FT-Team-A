@@ -16,24 +16,23 @@ So that I can search for them by genre.
 As a user,
 I want to be able to rate the movies,
 So that I can document my preferences.
+-> Responsibility: Francisco
 
 As a user,
 I want to be able to mark a movie as watched,
 So that I can see, which movies I already watched.
+-> Responsibility: Francisco
 
 As a user,
 I want to be able to delete movies,
 So that I can clean up my library.
 
-As a user,
-I want to be able to share a movie link, 
-So that I can share and access directly to specific movie.
--> Responsibility: Francisco 
 
 # Searching/Sorting/Display
 As a user,
 I want to be able to display my whole movie library, 
 So that I can see all my movies in the library.
+-> Responsibility: Francisco
 
 As a user,
 I want to be able to search for movies by name, genre, rating,
