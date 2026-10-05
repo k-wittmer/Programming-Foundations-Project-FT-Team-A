@@ -25,6 +25,10 @@ As a user,
 I want to be able to delete movies,
 So that I can clean up my library.
 
+As a user,
+I want to be able to share a movie link, 
+So that I can share and access directly to specific movie.
+-> Responsibility: Francisco 
 
 # Searching/Sorting/Display
 As a user,
