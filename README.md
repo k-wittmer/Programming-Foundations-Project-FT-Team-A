@@ -38,9 +38,10 @@ So that I can see all my movies in the library.
 -> Responsibility: Francisco
 
 As a user,
-I want to be able to search for movies by name, genre, rating,
-So that I can search for them by name, genre, rating.
+I want to be able to search for movies by title, genre and rating,
+So that I can quickly find movies matching my preferences.
 -> Responsibility: Max
+Acceptance criteria: User can search by title, genre or rating -> all matching movies are displayed -> title and genre searches are case-insensitive -> if no matching movies are found, display a message 
 
 As a user,
 I want to be able to sort the movies by genre, name and rating,
@@ -53,9 +54,10 @@ So that I can see my preferences.
 -> Responsibility: Ryan
 
 As a user,
-I want to be able to watch a random movie from the library that the program suggests,
-So that I don’t have to search for one.
+I want receive a random movie recommendation from my movie library,
+So that I can decide what to watch without searching for one manually.
 -> Responsibility: Max
+Acceptance criteria: The application randomly selects one movie from Not Watched- library -> recommended movie's title and genre are displayed to the user -> if no unwatched movies exist in Not Watched- library, a message is displayed to user
 
 As a user,
 I want to get a movie suggestion by a genre that I provide,
@@ -66,3 +68,4 @@ As a user,
 I want to be able to display all the movies I haven’t watched yet,
 So that I can easily find a movie I haven’t watched yet.
 -> Responsibility: Max
+Acceptance criteria: Only movies in Not Watched- library are displayed -> all displayed movies have their title, genre and rating visible to user -> if no movies are found in Not Watched- library, a message is displayed to user
