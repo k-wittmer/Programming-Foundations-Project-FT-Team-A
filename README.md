@@ -1,8 +1,10 @@
 # Programming-Foundations-Project-FT-Team-A
-# Creating a movie library
-jahbwdhjbebfbejbfbjerkbfjhbdfjhbvjfvbdfjhbvjhfdbvkjefbv
-# USER STORIES
-# Adding/Modifying/Deleting Data
+# Creating a movie library 📽️
+
+## Problem Description
+
+
+## USER STORIES
 As a user
 I want to add movies to the library,
 So that I can watch them later.
