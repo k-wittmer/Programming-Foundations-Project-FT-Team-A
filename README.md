@@ -34,7 +34,7 @@ So that I can see, which movies I already watched.
 -> Responsibility: Francisco
 
 
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 As a user,
 I want to be able to delete movies,
 So that I can clean up my library.
@@ -44,8 +44,9 @@ So that I can clean up my library.
   - The selected movie is removed from the library; all other movies remain unchanged.
   - A confirmation message is displayed after successful deletion.
   - If the library is empty or the selection is invalid, a message is displayed and nothing is deleted.
+    
   -> Responsibility: Ryan
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 # Searching/Sorting/Display
@@ -61,7 +62,7 @@ So that I can quickly find movies matching my preferences.
 Acceptance criteria: User can search by title, genre or rating -> all matching movies are displayed -> title and genre searches are case-insensitive -> if no matching movies are found, display a message 
 
 
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 As a user,
 I want to be able to sort the movies by genre, name and rating,
 So that I can search for them by name, genre, rating.
@@ -72,10 +73,11 @@ So that I can search for them by name, genre, rating.
   - The sorted list displays each movie's title, genre, rating and watched status. Missing ratings are displayed as "Not rated".
   - Sorting changes only the display order, not the movie details.
   - If the library is empty, the application displays "Your movie library is empty".
+    
   -> Responsibility: Ryan
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 As a user,
 I want to edit the title or genre of an existing movie so that I can correct mistakes without deleting and adding the movie again.
 
@@ -85,8 +87,9 @@ I want to edit the title or genre of an existing movie so that I can correct mis
   - Empty or whitespace-only values are rejected with an error message, and the existing value remains unchanged.
   - Editing the title or genre leaves the movie's rating and watched status unchanged.
   - If the library is empty or the selection is invalid, a message is displayed and no movie is changed.
+    
   -> Responsibility: Ryan
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 As a user,
