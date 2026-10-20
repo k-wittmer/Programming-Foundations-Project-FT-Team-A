@@ -47,7 +47,6 @@ Acceptance criteria:
 - If the library is empty, the movie selection is invalid, or the rating is outside the allowed range, a message is displayed and nothing is changed.
 
 -> Responsibility: Francisco
-
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 User Story:
