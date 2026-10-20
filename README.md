@@ -36,16 +36,29 @@ Acceptance criteria:
 -> Responsibility: Kiran
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-As a user,
-I want to be able to rate the movies,
-So that I can document my preferences.
+User Story:
+As a user, I want to be able to rate the movies, So that I can document my preferences.
+
+Acceptance criteria:
+- The user can select an existing movie to rate.
+- The user can give the selected movie a rating from 1 to 5.
+- The rating is saved and displayed with the selected movie.
+- The user can change the rating of a movie that has already been rated.
+- If the library is empty, the movie selection is invalid, or the rating is outside the allowed range, a message is displayed and nothing is changed.
 
 -> Responsibility: Francisco
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-As a user,
-I want to be able to mark a movie as watched,
-So that I can see, which movies I already watched.
+User Story:
+As a user, I want to be able to mark a movie as watched, So that I can see which movies I already watched.
+
+Acceptance criteria:
+- The user can select an existing movie to mark as watched.
+- The selected movie is marked as watched; all other movies remain unchanged.
+- The watched status is saved and displayed in the library.
+- The user can change the status back to unwatched.
+- If the library is empty or the selection is invalid, a message is displayed and nothing is changed.
 
 -> Responsibility: Francisco
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -63,11 +76,15 @@ So that I can clean up my library.
   -> Responsibility: Ryan
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+User Story:
+As a user, I want to be able to display my whole movie library, So that I can see all my movies in the library.
 
-# Searching/Sorting/Display
-As a user,
-I want to be able to display my whole movie library, 
-So that I can see all my movies in the library.
+Acceptance criteria:
+- The user can select an option to display the whole movie library.
+- All movies in the library are displayed.
+- Each movie is displayed with its information (title, genre, rating, and watched status).
+- Displaying the library does not change or delete any movies.
+- If the library is empty, a message is displayed informing the user that no movies are available.
 
 -> Responsibility: Francisco
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
