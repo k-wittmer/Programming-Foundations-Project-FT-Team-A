@@ -1,149 +1,359 @@
-# Programming-Foundations-Project-FT-Team-A
-# Creating a movie library 📽️
 
-## Problem Description
-It can be difficult to keep track of movies we want to watch,
-which ones we have already seen and how much we liked them.
-Our application addresses this problem by providing a simple command-line movie library where users can manage their collection and find a movie to watch.
+# 🎬 Movie Library
+### Programming Foundations Project | FT – Team A
 
-For each movie, the application stores:
-- **Title:** the name of the movie.
-- **Genre:** the movie's category, such as comedy or action.
-- **Rating:** an optional personal rating; otherwise displayed as "Not rated".
-- **Watched status:** whether the movie has been watched or not.
+A simple Python command-line application to organize, manage, and discover movies.
 
-## USER STORIES
-As a user
-I want to add movies to the library,
-So that I can watch them later.
+---
 
-Acceptance criteria:
-- A user can add a movie to the library.
-- The user is guided through the process by the program.
-- A confirmation message is displayed after the movie is added successfully
+## 📖 About the Project
 
--> Responsibility: Kiran
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Keeping track of movies we want to watch, movies we have already seen, and how much we liked them can be difficult.
 
-As a user,
-I want to be able to categorize the movies by genre,
-So that I can search for them by genre.
+**Movie Library** solves this problem by providing a simple command-line application that allows users to manage their personal movie collection.
 
-Acceptance criteria:
-- A user can add a genre to a movie.
-- A user can change a genre, if the wrong one was added.
+Users can add, edit, delete, search, sort, and rate movies, track their watched status, and receive movie recommendations.
 
--> Responsibility: Kiran
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### 🎯 Project Goals
 
-User Story:
-As a user, I want to be able to rate the movies, So that I can document my preferences.
+- Build a functional movie management application using Python.
+- Apply fundamental programming concepts.
+- Practice collaborative software development using GitHub.
+- Create an intuitive command-line user experience.
 
-Acceptance criteria:
-- The user can select an existing movie to rate.
-- The user can give the selected movie a rating from 1 to 5.
-- The rating is saved and displayed with the selected movie.
-- The user can change the rating of a movie that has already been rated.
-- If the library is empty, the movie selection is invalid, or the rating is outside the allowed range, a message is displayed and nothing is changed.
+---
 
--> Responsibility: Francisco
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## ✨ Features
 
-User Story:
-As a user, I want to be able to mark a movie as watched, So that I can see which movies I already watched.
+| Feature | Description |
+|---------|-------------|
+| ➕ Add Movies | Add new movies to the library |
+| 🏷️ Categorize | Assign and modify movie genres |
+| ⭐ Rate Movies | Rate movies from 1 to 5 |
+| ✅ Watched Status | Mark movies as watched or unwatched |
+| 🗑️ Delete Movies | Remove movies from the library |
+| 📋 Display Library | View all stored movies |
+| 🔍 Search Movies | Search by title, genre, or rating |
+| 🔃 Sort Movies | Sort by title, genre, or rating |
+| ✏️ Edit Movies | Update movie titles and genres |
+| 🎲 Random Movie | Get a random unwatched movie |
+| 🎯 Genre Suggestion | Get random suggestions by genre |
+| 🍿 Watchlist | Display all unwatched movies |
 
-Acceptance criteria:
-- The user can select an existing movie to mark as watched.
-- The selected movie is marked as watched; all other movies remain unchanged.
-- The watched status is saved and displayed in the library.
-- The user can change the status back to unwatched.
-- If the library is empty or the selection is invalid, a message is displayed and nothing is changed.
+---
 
--> Responsibility: Francisco
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## 🗂️ Movie Data Structure
 
-As a user,
-I want to be able to delete movies,
-So that I can clean up my library.
+Each movie contains the following information:
 
-  Acceptance criteria:
-  - The user can select an existing movie to delete.
-  - The selected movie is removed from the library; all other movies remain unchanged.
-  - A confirmation message is displayed after successful deletion.
-  - If the library is empty or the selection is invalid, a message is displayed and nothing is deleted.
-    
-  -> Responsibility: Ryan
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Attribute | Description | Example |
+|-----------|-------------|---------|
+| Title | Name of the movie | Interstellar |
+| Genre | Movie category | Sci-Fi |
+| Rating | Personal rating (1–5) | 5 |
+| Watched | Whether the movie was watched | True |
 
-User Story:
-As a user, I want to be able to display my whole movie library, So that I can see all my movies in the library.
+Movies without a rating are displayed as **"Not rated"**.
 
-Acceptance criteria:
-- The user can select an option to display the whole movie library.
-- All movies in the library are displayed.
-- Each movie is displayed with its information (title, genre, rating, and watched status).
-- Displaying the library does not change or delete any movies.
-- If the library is empty, a message is displayed informing the user that no movies are available.
+---
 
--> Responsibility: Francisco
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## 👥 Team & Responsibilities
 
-As a user,
-I want to be able to search for movies by title, genre and rating,
-So that I can quickly find movies matching my preferences.
--> Responsibility: Max
-Acceptance criteria: User can search by title, genre or rating -> all matching movies are displayed -> title and genre searches are case-insensitive -> if no matching movies are found, display a message 
+| Team Member | Responsibilities |
+|-------------|------------------|
+| **Kiran** | Add Movies, Categorize Movies, Genre Suggestions |
+| **Francisco** | Rate Movies, Watched Status, Display Library |
+| **Ryan** | Delete Movies, Sort Movies, Edit Movies |
+| **Max** | Search Movies, Random Recommendations, Watchlist |
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
-As a user,
-I want to be able to sort the movies by genre, name and rating,
-So that I can search for them by name, genre, rating.
+# 📋 User Stories & Acceptance Criteria
 
-  Acceptance criteria:
-  - The user can choose one of three sort orders: title alphabetically (A–Z), genre alphabetically (A–Z), or rating from highest to lowest.
-  - Movies without a rating appear last when sorting by rating.
-  - The sorted list displays each movie's title, genre, rating and watched status. Missing ratings are displayed as "Not rated".
-  - Sorting changes only the display order, not the movie details.
-  - If the library is empty, the application displays "Your movie library is empty".
-    
-  -> Responsibility: Ryan
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## 1. ➕ Add Movies
+**Responsible:** Kiran
 
-As a user,
-I want to edit the title or genre of an existing movie so that I can correct mistakes without deleting and adding the movie again.
+### User Story
+> As a user, I want to add movies to the library so that I can watch them later.
 
-  Acceptance criteria:
-  - The user can select an existing movie and choose whether to edit its title or genre.
-  - After a valid change, the updated value is shown when the library is displayed.
-  - Empty or whitespace-only values are rejected with an error message, and the existing value remains unchanged.
-  - Editing the title or genre leaves the movie's rating and watched status unchanged.
-  - If the library is empty or the selection is invalid, a message is displayed and no movie is changed.
-    
-  -> Responsibility: Ryan
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+### Acceptance Criteria
+- [ ] Users can add a movie to the library.
+- [ ] The program guides users through the process.
+- [ ] A confirmation message is displayed after successful addition.
 
-As a user,
-I want receive a random movie recommendation from my movie library,
-So that I can decide what to watch without searching for one manually.
--> Responsibility: Max
-Acceptance criteria: The application randomly selects one movie from Not Watched- library -> recommended movie's title and genre are displayed to the user -> if no unwatched movies exist in Not Watched- library, a message is displayed to user
+---
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## 2. 🏷️ Categorize Movies
+**Responsible:** Kiran
 
-As a user,
-I want to get a movie suggestion by a genre that I provide,
-So that I don’t have to search the library myself.
+### User Story
+> As a user, I want to categorize movies by genre so that I can search for them by genre.
 
-Acceptance criteria:
-- A user can tell the program to get a movie suggestion by genre.
-- The program displays three random movies from the given genre.
+### Acceptance Criteria
+- [ ] Users can assign a genre to a movie.
+- [ ] Users can change a genre if an incorrect one was assigned.
 
--> Responsibility: Kiran
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
-As a user,
-I want to be able to display all the movies I haven’t watched yet,
-So that I can easily find a movie I haven’t watched yet.
--> Responsibility: Max
-Acceptance criteria: Only movies in Not Watched- library are displayed -> all displayed movies have their title, genre and rating visible to user -> if no movies are found in Not Watched- library, a message is displayed to user
+## 3. ⭐ Rate Movies
+**Responsible:** Francisco
+
+### User Story
+> As a user, I want to rate movies so that I can document my preferences.
+
+### Acceptance Criteria
+- [ ] Users can select an existing movie to rate.
+- [ ] Ratings must be between 1 and 5.
+- [ ] Ratings are saved and displayed with the movie.
+- [ ] Existing ratings can be changed.
+- [ ] Invalid selections or ratings display an error message.
+- [ ] Invalid operations do not modify stored data.
+
+---
+
+## 4. ✅ Mark Movies as Watched
+**Responsible:** Francisco
+
+### User Story
+> As a user, I want to mark movies as watched so that I can see which movies I have already watched.
+
+### Acceptance Criteria
+- [ ] Users can select an existing movie.
+- [ ] Selected movies can be marked as watched.
+- [ ] Other movies remain unchanged.
+- [ ] Watched status is saved and displayed.
+- [ ] Movies can be marked as unwatched again.
+- [ ] Invalid selections display an error without changing data.
+
+---
+
+## 5. 🗑️ Delete Movies
+**Responsible:** Ryan
+
+### User Story
+> As a user, I want to delete movies so that I can clean up my library.
+
+### Acceptance Criteria
+- [ ] Users can select an existing movie to delete.
+- [ ] Only the selected movie is removed.
+- [ ] Other movies remain unchanged.
+- [ ] Successful deletion displays a confirmation message.
+- [ ] Empty libraries or invalid selections display an error.
+- [ ] Invalid operations do not delete any movies.
+
+---
+
+## 6. 📋 Display Movie Library
+**Responsible:** Francisco
+
+### User Story
+> As a user, I want to display my entire movie library so that I can see all my movies.
+
+### Acceptance Criteria
+- [ ] Users can display the entire library.
+- [ ] All stored movies are displayed.
+- [ ] Each movie shows its title, genre, rating, and watched status.
+- [ ] Displaying movies does not modify stored data.
+- [ ] An empty library displays an appropriate message.
+
+---
+
+## 7. 🔍 Search Movies
+**Responsible:** Max
+
+### User Story
+> As a user, I want to search for movies by title, genre, or rating so that I can quickly find movies matching my preferences.
+
+### Acceptance Criteria
+- [ ] Users can search by title.
+- [ ] Users can search by genre.
+- [ ] Users can search by rating.
+- [ ] All matching movies are displayed.
+- [ ] Title searches are case-insensitive.
+- [ ] Genre searches are case-insensitive.
+- [ ] A message is displayed if no matching movies are found.
+
+---
+
+## 8. 🔃 Sort Movies
+**Responsible:** Ryan
+
+### User Story
+> As a user, I want to sort movies by title, genre, or rating so that I can organize and find movies more easily.
+
+### Acceptance Criteria
+- [ ] Users can sort titles alphabetically (A–Z).
+- [ ] Users can sort genres alphabetically (A–Z).
+- [ ] Users can sort ratings from highest to lowest.
+- [ ] Movies without ratings appear last when sorting by rating.
+- [ ] Sorted results show title, genre, rating, and watched status.
+- [ ] Missing ratings are displayed as "Not rated".
+- [ ] Sorting does not modify movie details.
+- [ ] Empty libraries display "Your movie library is empty".
+
+---
+
+## 9. ✏️ Edit Movies
+**Responsible:** Ryan
+
+### User Story
+> As a user, I want to edit a movie's title or genre so that I can correct mistakes without deleting and re-adding the movie.
+
+### Acceptance Criteria
+- [ ] Users can select an existing movie.
+- [ ] Users can edit the title or genre.
+- [ ] Valid changes are reflected in the library.
+- [ ] Empty or whitespace-only values are rejected.
+- [ ] Invalid changes preserve the existing values.
+- [ ] Ratings and watched status remain unchanged.
+- [ ] Invalid selections display an error message.
+- [ ] An empty library cannot be edited.
+
+---
+
+## 10. 🎲 Random Movie Recommendation
+**Responsible:** Max
+
+### User Story
+> As a user, I want to receive a random movie recommendation from my library so that I can decide what to watch without searching manually.
+
+### Acceptance Criteria
+- [ ] The program randomly selects an unwatched movie.
+- [ ] The recommended movie's title and genre are displayed.
+- [ ] Only unwatched movies are eligible.
+- [ ] A message is displayed if no unwatched movies are available.
+
+---
+
+## 11. 🎯 Movie Suggestions by Genre
+**Responsible:** Kiran
+
+### User Story
+> As a user, I want to receive movie suggestions based on a genre I provide so that I do not have to search the library manually.
+
+### Acceptance Criteria
+- [ ] Users can request movie suggestions by genre.
+- [ ] The program selects three random movies from the chosen genre.
+- [ ] The selected movies are displayed to the user.
+
+---
+
+## 12. 🍿 Display Unwatched Movies
+**Responsible:** Max
+
+### User Story
+> As a user, I want to display all movies I have not watched yet so that I can easily find something new to watch.
+
+### Acceptance Criteria
+- [ ] Only unwatched movies are displayed.
+- [ ] Each movie displays its title, genre, and rating.
+- [ ] A message is displayed if no unwatched movies are available.
+
+---
+
+## 🛠️ Technologies
+
+| Technology | Purpose |
+|------------|---------|
+| Python | Application development |
+| Git | Version control |
+| GitHub | Team collaboration |
+| Terminal / CLI | User interface |
+
+---
+
+## 🚀 Getting Started
+
+### Requirements
+
+- Python 3.x
+- A terminal or Python-compatible IDE
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Navigate to the project directory:
+
+```bash
+cd Programming-Foundations-Project-FT-Team-A
+```
+
+Run the application (example):
+
+```bash
+python main.py
+```
+
+> Note: Update the commands if the project's final file structure differs.
+
+---
+
+## 💻 Example Interface
+
+The following illustrates the planned command-line interface:
+
+```text
+========================================
+           🎬 MOVIE LIBRARY
+========================================
+
+1. Add Movie
+2. Categorize Movie
+3. Rate Movie
+4. Mark Movie as Watched
+5. Delete Movie
+6. Display Library
+7. Search Movies
+8. Sort Movies
+9. Edit Movie
+10. Random Recommendation
+11. Genre Suggestions
+12. Show Unwatched Movies
+
+0. Exit
+
+========================================
+Enter your choice:
+```
+
+---
+
+## 📈 Development Progress
+
+| Feature | Assigned To | Status |
+|---------|-------------|--------|
+| Add Movies | Kiran | ⬜ Planned |
+| Categorize Movies | Kiran | ⬜ Planned |
+| Rate Movies | Francisco | ⬜ Planned |
+| Watched Status | Francisco | ⬜ Planned |
+| Delete Movies | Ryan | ⬜ Planned |
+| Display Library | Francisco | ⬜ Planned |
+| Search Movies | Max | ⬜ Planned |
+| Sort Movies | Ryan | ⬜ Planned |
+| Edit Movies | Ryan | ⬜ Planned |
+| Random Recommendation | Max | ⬜ Planned |
+| Genre Suggestions | Kiran | ⬜ Planned |
+| Display Unwatched Movies | Max | ⬜ Planned |
+
+---
+
+## 🎓 Academic Project
+
+**Course:** Programming Foundations
+
+**Project:** Creating a Movie Library
+
+**Team:** FT – Team A
+
+This project was developed as part of the Programming Foundations course to demonstrate fundamental Python programming skills and collaborative software development.
+
+---
+
+<p align="center">
+  <strong>🎬 Movie Library — FT Team A</strong>
+</p>
