@@ -251,48 +251,6 @@ Movies without a rating are displayed as **"Not rated"**.
 
 ---
 
-## 🛠️ Technologies
-
-| Technology | Purpose |
-|------------|---------|
-| Python | Application development |
-| Git | Version control |
-| GitHub | Team collaboration |
-| Terminal / CLI | User interface |
-
----
-
-## 🚀 Getting Started
-
-### Requirements
-
-- Python 3.x
-- A terminal or Python-compatible IDE
-
-### Installation
-
-Clone the repository:
-
-```bash
-git clone <repository-url>
-```
-
-Navigate to the project directory:
-
-```bash
-cd Programming-Foundations-Project-FT-Team-A
-```
-
-Run the application (example):
-
-```bash
-python main.py
-```
-
-> Note: Update the commands if the project's final file structure differs.
-
----
-
 ## 💻 Example Interface
 
 The following illustrates the planned command-line interface:
