@@ -5,5 +5,12 @@
         "genre": "Science Fiction",
         "rating": 5,
         "watched": true
-    }
+    },
+    {
+        "ID": 2,
+        "title": "Interstellar",
+        "genre": "Science Fiction",
+        "rating": 5,
+        "watched": true
+    }    
 ]
