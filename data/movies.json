@@ -12,5 +12,13 @@
         "genre": "Science Fiction",
         "rating": 5,
         "watched": true
-    }    
+    },
+    {
+        "ID": 3,
+        "title": "Frozen",
+        "genre": "Animation",
+        "rating": 4,
+        "watched": false
+    }
+
 ]
