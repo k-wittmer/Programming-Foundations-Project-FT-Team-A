@@ -27,7 +27,7 @@ sample_library = [
         "title": "Frozen",
         "genre": "Animation",
         "rating": 4,
-        "watched": False
+        "watched": True
     }
 ]
 
@@ -38,6 +38,9 @@ def get_unwatched_movies(movies):
     for movie in movies:
         if not movie["watched"]:
             unwatched_movies.append(movie)
+
+    if not unwatched_movies:
+            print("You've seen all movies")
 
     return unwatched_movies
 
