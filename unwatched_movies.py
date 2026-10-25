@@ -7,6 +7,11 @@
 # Each movie displays its title, genre, and rating.
 # A message is displayed if no unwatched movies are available.
 
+#Improvements/stuff to still work on:
+## When calling fuction and printing results it looks messy(because it shows movies as raw dictionaries)
+## When user has seen all movies, after the printed message the function also prints an empty list(can I get rid of this?)
+
+
 sample_library = [
 {
         "ID": 1,
