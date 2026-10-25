@@ -9,3 +9,29 @@
 # A message is displayed if no unwatched movies are available.
 
 
+sample_library = [
+{
+        "ID": 1,
+        "title": "Inception",
+        "genre": "Science Fiction",
+        "rating": 5,
+        "watched": True
+    },
+{
+        "ID": 2,
+        "title": "Interstellar",
+        "genre": "Science Fiction",
+        "rating": 5,
+        "watched": False
+    },
+{
+        "ID": 3,
+        "title": "Frozen",
+        "genre": "Animation",
+        "rating": 4,
+        "watched": False
+    }
+]
+
+
+
