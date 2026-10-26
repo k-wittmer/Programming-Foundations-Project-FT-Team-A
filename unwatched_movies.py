@@ -49,6 +49,7 @@ def get_unwatched_movies(movies):
 
     return unwatched_movies
 
-result = get_unwatched_movies(sample_library)
-print(result)
+if __name__ == "__main__":
+     result = get_unwatched_movies(sample_library)
+     print(result)
 
