@@ -35,3 +35,12 @@ sample_library = [
 
 import random
 from unwatched_movies import get_unwatched_movies
+
+def recommend_random_movie(movies):
+    unwatched_movies = get_unwatched_movies(movies)
+
+    if not unwatched_movies:
+        return
+    
+    recommendation = random.choice(unwatched_movies) 
+    print(recommendation)
