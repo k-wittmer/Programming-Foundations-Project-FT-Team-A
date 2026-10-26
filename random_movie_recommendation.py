@@ -22,3 +22,6 @@ def recommend_random_movie(movies):
     
     recommendation = random.choice(unwatched_movies) 
     print(recommendation)
+
+if __name__ == "__main__":
+    recommend_random_movie(sample_library)
