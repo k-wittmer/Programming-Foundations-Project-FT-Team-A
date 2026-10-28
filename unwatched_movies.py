@@ -25,14 +25,14 @@ sample_library = [
         "title": "Interstellar",
         "genre": "Science Fiction",
         "rating": 5,
-        "watched": True
+        "watched": False
     },
 {
         "ID": 3,
         "title": "Frozen",
         "genre": "Animation",
         "rating": 4,
-        "watched": True
+        "watched": False
     }
 ]
 
@@ -51,5 +51,9 @@ def get_unwatched_movies(movies):
 
 if __name__ == "__main__":
      result = get_unwatched_movies(sample_library)
-     print(result)
 
+     for movie in result:
+          print(
+               f'Title: {movie["title"]} | '
+               f'Genre: {movie["genre"]} | '
+               f'Rating: {movie["rating"]}')
