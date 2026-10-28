@@ -21,7 +21,15 @@ def recommend_random_movie(movies):
         return
     
     recommendation = random.choice(unwatched_movies) 
-    print(recommendation)
+    return recommendation
+
 
 if __name__ == "__main__":
-    recommend_random_movie(sample_library)
+    recommended_movie = recommend_random_movie(sample_library)
+    if recommended_movie:
+        print(
+        f'Title: {recommended_movie["title"]} | '
+        f'Genre: {recommended_movie["genre"]} | '
+        f'Rating: {recommended_movie["rating"]}'
+    )
+
