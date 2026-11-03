@@ -2,6 +2,7 @@
 
 import ui
 import movies
+import recommendations
 
 import json
 from pathlib import Path
@@ -20,3 +21,5 @@ if user_operation == 1: #Calls the add movie feature.
         print("Movie added successfully!")
     else:
         print("Unable to add the movie to the library.")
+elif user_operation == 11:
+    recommendations.genre_suggestion()
