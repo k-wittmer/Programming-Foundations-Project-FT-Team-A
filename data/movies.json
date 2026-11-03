@@ -19,6 +19,40 @@
         "genre": "Animation",
         "rating": 4,
         "watched": false
+    },
+    {
+        "ID": 4,
+        "title": "ICE AGE 1",
+        "genre": "Animation",
+        "rating": 5,
+        "watched": true
+    },
+    {
+        "ID": 5,
+        "title": "STAR WARS 1 - THE PHANTOM MENACE",
+        "genre": "Science-Fiction",
+        "rating": 5,
+        "watched": true
+    },
+    {
+        "ID": 6,
+        "title": "STAR WARS 2 - ATTACK OF THE CLONES",
+        "genre": "Science-Fiction",
+        "rating": 4,
+        "watched": true
+    },
+    {
+        "ID": 7,
+        "title": "STAR WARS 3 - REVENGE OF THE SITH",
+        "genre": "Science-Fiction",
+        "rating": 5,
+        "watched": true
+    },
+    {
+        "ID": 8,
+        "title": "STAR WARS 4 - A NEW HOPE",
+        "genre": "Science-Fiction",
+        "rating": "**Not rated**",
+        "watched": true
     }
-
 ]
