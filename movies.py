@@ -56,14 +56,14 @@ def add_movie_watched():
 def load_movie_library():
     if not FILE.exists():
         return []
-    with open(FILE, "r", encoding = "utf-8") as f:
-        return json.load(f)
+    with open(FILE, "r", encoding = "utf-8") as file:
+        return json.load(file)
 
 
 #Saves the updates made to the movie list/dictionary.
 def save_movies(movies):
-    with open(FILE, "w", encoding = "utf-8") as f:
-        json.dump(movies, f, indent = 4, ensure_ascii = False)
+    with open(FILE, "w", encoding = "utf-8") as file:
+        json.dump(movies, file, indent = 4, ensure_ascii = False)
 
 
 #Gets the next biggest ID to append to the list.
