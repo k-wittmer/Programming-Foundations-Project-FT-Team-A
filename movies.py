@@ -25,10 +25,17 @@ def add_movie_genre():
 
 #Gets the user input about the rating of the movie.
 def add_movie_rating():
-    movie_rating = int(input("How would you rate the movie from 1-5? (0 - to enter no rating): "))
-    while 0 > movie_rating > 5:
-        print("Invalid input. Rating must be between 1-5.")
-        movie_rating = int(input("How would you rate the movie from 1-5? (Press Enter to add no rating): "))
+    while True:
+        movie_rating = (input("How would you rate the movie from 1-5? (0 - to enter no rating): ")).strip()
+        try:
+            movie_rating = int(movie_rating)
+        except ValueError:
+            print("Invalid input. The rating has to be in the range from 1-5? (0 - to enter no rating).")
+        else:
+            if movie_rating in range(0,6):
+                break
+            else:
+                print("Invalid input. The rating has to be in the range from 1-5? (0 - to enter no rating).")
 
     if movie_rating == 0:
         movie_rating = "**Not rated**"
