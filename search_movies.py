@@ -14,3 +14,23 @@
 
 from unwatched_movies import sample_library
 
+def search_by_genre(movies, genre):
+    results = []
+
+    for movie in movies:
+        if movie["genre"].lower() == genre.lower():
+            results.append(movie)
+
+    return results
+
+selected_genre = input("Enter a genre: ")
+results = search_by_genre(sample_library, selected_genre)
+
+if not results:
+    print("No movies in selected genre")
+else:
+    for movie in results:
+        print(
+                       f'Title: {movie["title"]} | '
+                       f'Genre: {movie["genre"]} | '
+                       f'Rating: {movie["rating"]}')
