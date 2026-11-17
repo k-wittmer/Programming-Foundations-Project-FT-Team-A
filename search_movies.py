@@ -31,9 +31,9 @@ if not results:
 else:
     for movie in results:
         print(
-                       f'Title: {movie["title"]} | '
-                       f'Genre: {movie["genre"]} | '
-                       f'Rating: {movie["rating"]}')
+                    f'Title: {movie["title"]} | '
+                    f'Genre: {movie["genre"]} | '
+                    f'Rating: {movie["rating"]}')
 
 def search_by_rating(movies, rating):
     results = []
@@ -52,6 +52,26 @@ if not results:
 else:
     for movie in results:
         print(
-                               f'Title: {movie["title"]} | '
-                               f'Genre: {movie["genre"]} | '
-                               f'Rating: {movie["rating"]}')
+                    f'Title: {movie["title"]} | '
+                    f'Genre: {movie["genre"]} | '
+                    f'Rating: {movie["rating"]}')
+
+def search_by_title(movies, title):
+    results = []
+
+    for movie in movies:
+        if title.lower() in movie["title"].lower():
+            results.append(movie)
+    return results
+
+selected_title = input("Enter a title: ")
+results = search_by_title(sample_library, selected_title)
+
+if not results:
+    print("No movies in selected title")
+else:
+   for movie in results:
+           print(
+                    f'Title: {movie["title"]} | '
+                    f'Genre: {movie["genre"]} | '
+                    f'Rating: {movie["rating"]}') 
