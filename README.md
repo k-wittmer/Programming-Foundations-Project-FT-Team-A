@@ -96,7 +96,7 @@ Movies without a rating are displayed as **"Not rated"**.
 ---
 
 ## 3. ⭐ Rate Movies
-**Responsible:** Francisco
+**Responsible:** Kiran (Francisco)
 
 ### User Story
 > As a user, I want to rate movies so that I can document my preferences.
@@ -112,7 +112,7 @@ Movies without a rating are displayed as **"Not rated"**.
 ---
 
 ## 4. ✅ Mark Movies as Watched
-**Responsible:** Francisco
+**Responsible:** Kiran (Francisco)
 
 ### User Story
 > As a user, I want to mark movies as watched so that I can see which movies I have already watched.
