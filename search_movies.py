@@ -34,3 +34,24 @@ else:
                        f'Title: {movie["title"]} | '
                        f'Genre: {movie["genre"]} | '
                        f'Rating: {movie["rating"]}')
+
+def search_by_rating(movies, rating):
+    results = []
+
+    for movie in movies:
+        if movie["rating"] == rating:
+            results.append(movie)
+    
+    return results
+
+selected_rating = int(input("Enter a rating: "))
+results = search_by_rating(sample_library, selected_rating)
+
+if not results:
+    print("No movies in selected rating")
+else:
+    for movie in results:
+        print(
+                               f'Title: {movie["title"]} | '
+                               f'Genre: {movie["genre"]} | '
+                               f'Rating: {movie["rating"]}')
