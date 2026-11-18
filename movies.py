@@ -114,10 +114,14 @@ def select_movie():
     for movie in library:
         ui.display_movie(movie)
 
-    selected_id = input("Choose a movie ID: ").strip()
+    try:
+        selected_id = int(input("Choose a movie ID: ").strip())
+    except ValueError:
+        print("Please enter a whole number.")
+        return library, None
 
     for movie in library:
-        if str(movie["ID"]) == selected_id:
+        if movie["ID"] == selected_id:
             return library, movie
 
     print("Invalid movie ID.")
