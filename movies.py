@@ -104,34 +104,37 @@ def add_movie():
 
     return True
 
-def select_movie(library):
+def select_movie():
+    library = load_movie_library()
+
     if not library:
         print("Your movie library is empty")
-        return None
+        return library, None
 
     for movie in library:
-        print(f"{movie['ID']} - {movie['title']}")
+        ui.display_movie(movie)
 
     selected_id = input("Choose a movie ID: ").strip()
 
     for movie in library:
         if str(movie["ID"]) == selected_id:
-            return movie
+            return library, movie
 
     print("Invalid movie ID.")
-    return None
+    return library, None
 
 
 def delete_movie():
-    library = load_movie_library()
-    movie = select_movie(library)
+    library, movie = select_movie()
 
     if movie is None:
         return
 
     library.remove(movie)
     save_movies(library)
-    print(f"Deleted: {movie['title']}")
+
+    print("Movie deleted:")
+    ui.display_movie(movie)
 
 
 
