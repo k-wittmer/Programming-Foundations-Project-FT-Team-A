@@ -54,5 +54,12 @@
         "genre": "Science-Fiction",
         "rating": "**Not rated**",
         "watched": true
+    },
+    {
+        "ID": 9,
+        "title": "LOTR - THE FELLOWSHIP OF THE RING",
+        "genre": "Fantasy",
+        "rating": 5,
+        "watched": true
     }
 ]
