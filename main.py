@@ -37,8 +37,8 @@ while is_running:
     elif user_operation == 5: #xxx
         xxx
 
-    elif user_operation == 6: #xxx
-        xxx
+    elif user_operation == 6:
+        movies.delete_movie()
 
     elif user_operation == 7: #xxx
         xxx
