@@ -78,3 +78,11 @@ def movie_genres():
 
 #Dictionary of Movie Genres
 dict_movie_genre = {1: "Action", 2: "Adventure", 3: "Animation", 4: "Comedy", 5: "Crime", 6: "Drama", 7: "Documentary", 8: "Fantasy", 9: "Historical", 10: "Horror", 11: "Musical", 12: "Mystery", 13: "Romance", 14: "Science-Fiction", 15: "Thriller", 16: "War", 17: "Western"}
+
+def display_movie(movie):
+    watched = "Watched" if movie["watched"] else "Not watched"
+
+    print(
+        f"Movie-ID: {movie['ID']} || {movie['title']} | "
+        f"{movie['genre']} | Rating: {movie['rating']} | {watched}"
+    )
