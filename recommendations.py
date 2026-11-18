@@ -33,6 +33,5 @@ def genre_suggestion():
         print(f"There are no movies with the genre '{selected_genre}' in the movie library.")
     else:
         for movie in suggested_movies:
-            watched = "Watched" if movie["watched"] else "Not watched"
-            print(f"Movie-ID: {movie["ID"]} || {movie["title"]} | {movie["genre"]} | Rating: {movie["rating"]} | {watched}")
+            ui.display_movie(movie)
 
