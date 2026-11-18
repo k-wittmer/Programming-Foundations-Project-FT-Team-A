@@ -104,6 +104,7 @@ def add_movie():
 
     return True
 
+
 def select_movie():
     library = load_movie_library()
 
@@ -114,19 +115,18 @@ def select_movie():
     for movie in library:
         ui.display_movie(movie)
 
-    try:
-        selected_id = int(input("Choose a movie ID: ").strip())
-    except ValueError:
-        print("Please enter a whole number.")
-        return library, None
+    while True:
+        try:
+            selected_id = int(input("Choose a movie ID: ").strip())
+        except ValueError:
+            print("Please enter a whole number.")
+            continue
 
-    for movie in library:
-        if movie["ID"] == selected_id:
-            return library, movie
+        for movie in library:
+            if movie["ID"] == selected_id:
+                return library, movie
 
-    print("Invalid movie ID.")
-    return library, None
-
+        print("Invalid movie ID. Please try again.")
 
 def delete_movie():
     library, movie = select_movie()
