@@ -11,30 +11,14 @@
 ## When calling fuction and printing results it looks messy(because it shows movies as raw dictionaries)
 ## When user has seen all movies, after the printed message the function also prints an empty list(can I get rid of this?)
 
+import movies
 
-sample_library = [
-{
-        "ID": 1,
-        "title": "Inception",
-        "genre": "Science Fiction",
-        "rating": 5,
-        "watched": True
-    },
-{
-        "ID": 2,
-        "title": "Interstellar",
-        "genre": "Science Fiction",
-        "rating": 5,
-        "watched": False
-    },
-{
-        "ID": 3,
-        "title": "Frozen",
-        "genre": "Animation",
-        "rating": 4,
-        "watched": False
-    }
-]
+import json
+from pathlib import Path
+
+#Sets/anchors the file path of the movies.json to the script, instead of the local directory.
+FILE = Path(__file__).parent / "data" / "movies.json"
+
 
 
 def get_unwatched_movies(movies):
@@ -50,7 +34,8 @@ def get_unwatched_movies(movies):
     return unwatched_movies
 
 if __name__ == "__main__":
-     result = get_unwatched_movies(sample_library)
+     movie_library = movies.load_movie_library()
+     result = get_unwatched_movies(movie_library)
 
      for movie in result:
           print(
