@@ -1,5 +1,6 @@
 
 
+import movies
 
 import json
 from pathlib import Path
@@ -42,7 +43,17 @@ def mark_movie_watched():
     else:
         print("Invalid answer")
         return
-    
+
+    #update the watch status of selected movie
+    selected_movie["watched"] = watched_status
+
+    #save changes to json
+    try:
+        movies.save_movies(movie_library)
+        print("Changes saved succesfully")
+    except Exception as error:
+        print(f"An error occured while trying to make changes: {error}")
+
 
 
 #testing the function
