@@ -11,8 +11,15 @@
 # Genre searches are case-insensitive.
 # A message is displayed if no matching movies are found.
 
+import json
+from pathlib import Path
 
-from unwatched_movies import sample_library
+#Sets/anchors the file path of the movies.json to the script, instead of the local directory.
+FILE = Path(__file__).parent / "data" / "movies.json"
+
+import movies
+
+movie_library = movies.load_movie_library()
 
 def search_by_genre(movies, genre):
     results = []
@@ -24,7 +31,7 @@ def search_by_genre(movies, genre):
     return results
 
 selected_genre = input("Enter a genre: ")
-results = search_by_genre(sample_library, selected_genre)
+results = search_by_genre(movie_library, selected_genre)
 
 if not results:
     print("No movies in selected genre")
@@ -45,7 +52,7 @@ def search_by_rating(movies, rating):
     return results
 
 selected_rating = int(input("Enter a rating: "))
-results = search_by_rating(sample_library, selected_rating)
+results = search_by_rating(movie_library, selected_rating)
 
 if not results:
     print("No movies in selected rating")
@@ -65,7 +72,7 @@ def search_by_title(movies, title):
     return results
 
 selected_title = input("Enter a title: ")
-results = search_by_title(sample_library, selected_title)
+results = search_by_title(movie_library, selected_title)
 
 if not results:
     print("No movies in selected title")
