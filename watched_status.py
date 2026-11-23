@@ -31,7 +31,18 @@ def mark_movie_watched():
     print("1. Mark movie as watched")
     print("2. Mark movie as unwathced")
 
-    choice = input("Choose function: ").strip
+    choice = input("Choose function: ").strip()
+
+    if choice == "1":
+        watched_status = True
+
+    elif choice == "2":
+        watched_status = False
+
+    else:
+        print("Invalid answer")
+        return
+    
 
 
 #testing the function
