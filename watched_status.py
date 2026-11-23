@@ -12,7 +12,7 @@ import movies
 def mark_movie_watched():
 
     #select an existing movie
-    selected_movie = movies.select_movie()
+    movie_library, selected_movie = movies.select_movie()
 
     if selected_movie is None:
         print("Invalid movie selection")
@@ -23,7 +23,10 @@ def mark_movie_watched():
         current_status = "Watched"
     else:
         current_status = "Unwatched"
+
     print(
                f'{selected_movie["title"]} | {current_status}')
 
-
+#testing the function
+if __name__ == "__main__":
+    mark_movie_watched()
