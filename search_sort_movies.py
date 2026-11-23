@@ -11,6 +11,10 @@
 # Genre searches are case-insensitive.
 # A message is displayed if no matching movies are found.
 
+#stuff to work on: strip() to improve usability, make it so that user can select one rather than all function running back2back 
+#give a list or range to choose from before input, maybe loop that wrong ans doesn't make user start from beginning
+#fix bug when typing text to rating input it gives a valueError
+
 import json
 from pathlib import Path
 
