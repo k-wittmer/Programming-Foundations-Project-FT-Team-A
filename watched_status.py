@@ -18,4 +18,12 @@ def mark_movie_watched():
         print("Invalid movie selection")
         return
 
-mark_movie_watched()
+    #display the current wacth status
+    if selected_movie["watched"] == True:
+        current_status = "Watched"
+    else:
+        current_status = "Unwatched"
+    print(
+               f'{selected_movie["title"]} | {current_status}')
+
+
