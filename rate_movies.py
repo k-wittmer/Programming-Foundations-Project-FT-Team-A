@@ -29,6 +29,14 @@ def rate_movie():
             movie["rating"] = new_rating
             break
 
+     #save changes to json
+    try:
+        movies.save_movies(movie_library)
+        print("Changes saved succesfully")
+    except Exception as error:
+        print(f"An error occured while trying to make changes: {error}")
+
+
 #testing the function
 if __name__ == "__main__":
     rate_movie()
