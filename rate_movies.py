@@ -18,7 +18,19 @@ FILE = Path(__file__).parent / "data" / "movies.json"
 
 import movies
 
-selected_movie = movies.select_movie()
-movie_library = movies.load_movie_library()
+movie_library, selected_movie = movies.select_movie()
+
 new_rating = movies.add_movie_rating()
 
+def rate_movie():
+
+    for movie in movie_library:
+        if movie["ID"] == selected_movie["ID"]:
+            movie["rating"] = new_rating
+            break
+
+#testing the function
+if __name__ == "__main__":
+    rate_movie()
+    
+    
