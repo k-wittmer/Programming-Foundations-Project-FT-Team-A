@@ -26,6 +26,13 @@ def mark_movie_watched():
 
     print(
                f'{selected_movie["title"]} | {current_status}')
+    
+    #ask user to change watch status
+    print("1. Mark movie as watched")
+    print("2. Mark movie as unwathced")
+
+    choice = input("Choose function: ").strip
+
 
 #testing the function
 if __name__ == "__main__":
