@@ -68,5 +68,40 @@
         "genre": "Fantasy",
         "rating": 5,
         "watched": true
+    },
+    {
+        "ID": 11,
+        "title": "HARRY POTTER 1 - THE PHILOSOPHER'S STONE",
+        "genre": "Fantasy",
+        "rating": 5,
+        "watched": true
+    },
+    {
+        "ID": 12,
+        "title": "WAKE UP DEAD MAN",
+        "genre": "Mystery",
+        "rating": 5,
+        "watched": true
+    },
+    {
+        "ID": 13,
+        "title": "A LIFE ON OUR PLANET",
+        "genre": "Documentary",
+        "rating": 5,
+        "watched": true
+    },
+    {
+        "ID": 14,
+        "title": "JAMES BOND - SKYFALL",
+        "genre": "Action",
+        "rating": 4,
+        "watched": true
+    },
+    {
+        "ID": 15,
+        "title": "SHUTTER ISLAND",
+        "genre": "Thriller",
+        "rating": 4,
+        "watched": true
     }
 ]
