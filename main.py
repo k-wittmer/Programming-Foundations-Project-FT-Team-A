@@ -17,16 +17,21 @@ is_running = True
 while is_running:
     user_operation = ui.main_menu()
 
+    if user_operation == 1: #Function to add a movie.
+        movie_library = movies.add_movie()
+        movies.save_movies(movie_library)
 
-    if user_operation == 1: #Calls the add movie feature.
-        is_success = movies.add_movie()
-        if is_success:
-            print("Movie added successfully!")
-        else:
-            print("Unable to add the movie to the library.")
 
-    elif user_operation == 2: #Calls the add/change category feature.
-        xxx
+    elif user_operation == 2: #Function to add/change a category.
+        movie_library, selected_movie = movies.select_movie()
+        new_genre = movies.add_movie_genre()
+
+        for movie in movie_library:
+            if movie["ID"] == selected_movie["ID"]:
+                movie["genre"] = new_genre
+
+        movies.save_movies(movie_library)
+
 
     elif user_operation == 3: #Calls the add/change rating feature.
         xxx
