@@ -68,7 +68,7 @@ def load_movie_library():
 
 
 #Saves the updates made to the movie list/dictionary.
-def save_movies(movie_library):
+def save_movie_library(movie_library):
     try:
         with open(FILE, "w", encoding = "utf-8") as file:
             json.dump(movie_library, file, indent = 4, ensure_ascii = False)
@@ -140,7 +140,7 @@ def delete_movie():
         return
 
     movie_library.remove(movie)
-    save_movies(movie_library)
+    save_movie_library(movie_library)
 
     print("Movie deleted:")
     ui.display_movie(movie)

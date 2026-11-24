@@ -19,7 +19,7 @@ while is_running:
 
     if user_operation == 1: #Function to add a movie.
         movie_library = movies.add_movie()
-        movies.save_movies(movie_library)
+        movies.save_movie_library(movie_library)
 
 
     elif user_operation == 2: #Function to add/change a category.
@@ -30,7 +30,7 @@ while is_running:
             if movie["ID"] == selected_movie["ID"]:
                 movie["genre"] = new_genre
 
-        movies.save_movies(movie_library)
+        movies.save_movie_library(movie_library)
 
 
     elif user_operation == 3: #Calls the add/change rating feature.

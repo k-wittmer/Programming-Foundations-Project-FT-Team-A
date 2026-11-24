@@ -31,7 +31,7 @@ def rate_movie():
 
      #save changes to json
     try:
-        movies.save_movies(movie_library)
+        movies.save_movie_library(movie_library)
         print("Changes saved succesfully")
     except Exception as error:
         print(f"An error occured while trying to make changes: {error}")
