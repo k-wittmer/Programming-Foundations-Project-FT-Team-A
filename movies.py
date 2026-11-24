@@ -68,14 +68,26 @@ def load_movie_library():
 
 
 #Saves the updates made to the movie list/dictionary.
-def save_movies(movies):
-    with open(FILE, "w", encoding = "utf-8") as file:
-        json.dump(movies, file, indent = 4, ensure_ascii = False)
+def save_movies(movie_library):
+    try:
+        with open(FILE, "w", encoding = "utf-8") as file:
+            json.dump(movie_library, file, indent = 4, ensure_ascii = False)
+
+    except Exception as error:
+        print(f"Error, unable to save the movie library. {error}")
+        is_success = False
+
+    is_success = True
+
+    if is_success:
+        print("Movie library saved successfully!")
+    else:
+        print("Unable to save the movie library.")
 
 
 #Gets the next biggest ID to append to the list.
-def next_id(movies):
-    return max((m["ID"] for m in movies), default = 0) +1
+def next_id(movie_library):
+    return max((m["ID"] for m in movie_library), default = 0) +1
 
 
 #Add a movie to the movies.json file
@@ -86,33 +98,26 @@ def add_movie():
     rating = add_movie_rating()
     is_watched = add_movie_watched()
 
-    movies = load_movie_library()
-    movies.append({
-        "ID": next_id(movies),
+    movie_library = load_movie_library()
+    movie_library.append({
+        "ID": next_id(movie_library),
         "title": title,
         "genre": genre,
         "rating": rating,
         "watched": is_watched,
     })
 
-    try:
-        save_movies(movies)
-
-    except Exception as error:
-        print(f"Error, unable to save the movie to the library. {error}")
-        return False
-
-    return True
+    return movie_library
 
 
 def select_movie():
-    library = load_movie_library()
+    movie_library = load_movie_library()
 
-    if not library:
+    if not movie_library:
         print("Your movie library is empty")
-        return library, None
+        return movie_library, None
 
-    for movie in library:
+    for movie in movie_library:
         ui.display_movie(movie)
 
     while True:
@@ -122,20 +127,20 @@ def select_movie():
             print("Please enter a whole number.")
             continue
 
-        for movie in library:
+        for movie in movie_library:
             if movie["ID"] == selected_id:
-                return library, movie
+                return movie_library, movie
 
         print("Invalid movie ID. Please try again.")
 
 def delete_movie():
-    library, movie = select_movie()
+    movie_library, movie = select_movie()
 
     if movie is None:
         return
 
-    library.remove(movie)
-    save_movies(library)
+    movie_library.remove(movie)
+    save_movies(movie_library)
 
     print("Movie deleted:")
     ui.display_movie(movie)
