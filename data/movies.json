@@ -2,14 +2,14 @@
     {
         "ID": 1,
         "title": "Inception",
-        "genre": "Science Fiction",
+        "genre": "Science-Fiction",
         "rating": 5,
         "watched": false
     },
     {
         "ID": 2,
         "title": "Interstellar",
-        "genre": "Science Fiction",
+        "genre": "Science-Fiction",
         "rating": 5,
         "watched": true
     },
@@ -58,6 +58,13 @@
     {
         "ID": 9,
         "title": "LOTR - THE FELLOWSHIP OF THE RING",
+        "genre": "Fantasy",
+        "rating": 5,
+        "watched": true
+    },
+    {
+        "ID": 10,
+        "title": "LOTR - THE TWO TOWERS",
         "genre": "Fantasy",
         "rating": 5,
         "watched": true
