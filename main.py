@@ -3,6 +3,7 @@
 import ui
 import movies
 import recommendations
+import sort_movies
 
 import json
 from pathlib import Path
@@ -39,8 +40,8 @@ while is_running:
     elif user_operation == 4: #Calls the add/change watched status feature.
         xxx
 
-    elif user_operation == 5: #xxx
-        xxx
+    elif user_operation == 5:
+        movies.edit_movie()
 
     elif user_operation == 6:
         movies.delete_movie()
@@ -51,8 +52,8 @@ while is_running:
     elif user_operation == 8: #xxx
         xxx
 
-    elif user_operation == 9: #xxx
-        xxx
+    elif user_operation == 9:
+        sort_movies.sort_movies()
 
     elif user_operation == 10: #xxx
         xxx
