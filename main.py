@@ -66,9 +66,6 @@ while is_running:
 
     elif user_operation == 0: #Exits the programm.
         is_running = False
-        print("")
-        print("==================================================")
+        print("\n" + "=" * 60)
         print("Exiting the programm. Byeeee!")
-        print("==================================================")
-        print("")
-        print("")
+        print("=" * 60 + "\n\n")
