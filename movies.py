@@ -156,4 +156,33 @@ def delete_movie():
     ui.display_movie(movie)
 
 
+# Ryan: edit the title or genre of a selected movie.
+def edit_movie():
+    movie_library, movie = select_movie()
+
+    if movie is None:
+        return
+
+    choice = input("Change 1 - Title or 2 - Genre: ").strip()
+
+    while choice not in ("1", "2"):
+        print("Please enter 1 or 2.")
+        choice = input("Change 1 - Title or 2 - Genre: ").strip()
+
+    if choice == "1":
+        title = input("New title: ").strip()
+
+        while title == "":
+            print("The title cannot be empty.")
+            title = input("New title: ").strip()
+
+        movie["title"] = title
+    else:
+        movie["genre"] = add_movie_genre()
+
+    save_movie_library(movie_library)
+    print("Movie updated:")
+    ui.display_movie(movie)
+
+
 
