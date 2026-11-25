@@ -15,11 +15,18 @@ def add_movie_title():
         if not movie_title or movie_title.isspace():
             print("\n" + "=" * 60)
             print("Movie title cannot be empty.")
-            print("=" * 60 + "\n\n")  
-        else:
-            break
+            print("=" * 60 + "\n\n")
+            continue
 
-    return movie_title
+        movie_library = load_movie_library()
+        if any(movie["title"] == movie_title for movie in movie_library):
+            print("\n" + "=" * 60)
+            print("Movie already exists in the library.")
+            print("=" * 60 + "\n\n") 
+            continue
+
+        else:
+            return movie_title
 
 
 #Gets the user input about the genre, which is to be assigned to the movie.
