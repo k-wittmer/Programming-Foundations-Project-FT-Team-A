@@ -80,20 +80,20 @@ def save_movie_library(movie_library):
     is_success = True
 
     if is_success:
-        print("")
-        print("==================================================")
-        print("Movie library saved successfully!")
-        print("==================================================")
-        print("")
-        print("")
-    else:
-        print("")
-        print("==================================================")
-        print("Unable to save the movie library.")
-        print("==================================================")
-        print("")
-        print("")
+        print("""
+        ==================================================
+        Movie library saved successfully!
+        ==================================================
 
+        """)
+    else:
+        print("""
+        ==================================================
+        Unable to save the movie library.
+        ==================================================
+        
+        """)
+        
 
 #Gets the next biggest ID to append to the list.
 def next_id(movie_library):
