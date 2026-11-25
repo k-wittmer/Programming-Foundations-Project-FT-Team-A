@@ -13,12 +13,9 @@ def add_movie_title():
     while True:
         movie_title = input("Name of the Movie: ").upper()
         if not movie_title or movie_title.isspace():
-            print("""
-            ==================================================
-            Movie title cannot be empty.
-            ==================================================
-            
-            """)
+            print("\n" + "=" * 60)
+            print("Movie title cannot be empty.")
+            print("=" * 60 + "\n\n")  
         else:
             break
 
@@ -90,19 +87,14 @@ def save_movie_library(movie_library):
     is_success = True
 
     if is_success:
-        print("""
-        ==================================================
-        Movie library saved successfully!
-        ==================================================
-
-        """)
-    else:
-        print("""
-        ==================================================
-        Unable to save the movie library.
-        ==================================================
+        print("\n" + "=" * 60)
+        print("Movie library saved successfully!")
+        print("=" * 60 + "\n\n")  
         
-        """)
+    else:
+        print("\n" + "=" * 60)
+        print("Unable to save the movie library.")
+        print("=" * 60 + "\n\n")  
 
 
 #Gets the next biggest ID to append to the list.

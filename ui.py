@@ -3,7 +3,7 @@
 
 # Main menu
 def main_menu():
-    print("==================================================")
+    print("============================================================")
     print("Select the number of the operation that you want to do.")
     print("")
     print("1 - Add Movie")
@@ -20,7 +20,7 @@ def main_menu():
     print("12 - Show Unwatched Movies")
     print("")
     print("0 - Exit")
-    print("==================================================")
+    print("============================================================")
 
     while True:
         user_operation = input("Enter the number of the operation that you want to do: ").strip()
@@ -39,7 +39,7 @@ def main_menu():
 
 #List of movie genres
 def movie_genres():
-    print("==================================================")
+    print("============================================================")
     print("Select the movie genre.")
     print("")
     print("1 - Action")
@@ -60,7 +60,7 @@ def movie_genres():
     print("16 - War")
     print("17 - Western")
     print("")
-    print("==================================================")
+    print("============================================================")
 
     while True:
         movie_genre = input("Enter the number of the movie genre: ").strip()
