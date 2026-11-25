@@ -30,11 +30,9 @@ def rate_movie():
             break
 
      #save changes to json
-    try:
-        movies.save_movie_library(movie_library)
-        print("Changes saved succesfully")
-    except Exception as error:
-        print(f"An error occured while trying to make changes: {error}")
+    movies.save_movie_library(movie_library)
+        
+        
 
 
 #testing the function
