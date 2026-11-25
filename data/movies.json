@@ -109,13 +109,13 @@
         "title": "AVENGERS - DOOMSDAY",
         "genre": "Action",
         "rating": "**Not rated**",
-        "watched": false
+        "watched": true
     },
     {
         "ID": 17,
         "title": "MADAGASCAR 1",
         "genre": "Animation",
         "rating": 5,
-        "watched": true
+        "watched": false
     }
 ]
