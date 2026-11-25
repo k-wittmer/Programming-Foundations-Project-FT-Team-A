@@ -86,12 +86,11 @@ def save_movie_library(movie_library):
     try:
         with open(FILE, "w", encoding = "utf-8") as file:
             json.dump(movie_library, file, indent = 4, ensure_ascii = False)
+        is_success = True
 
     except Exception as error:
         print(f"Error, unable to save the movie library. {error}")
         is_success = False
-
-    is_success = True
 
     if is_success:
         print("\n" + "=" * 60)
