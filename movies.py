@@ -10,7 +10,17 @@ FILE = Path(__file__).parent / "data" / "movies.json"
 
 #Gets the user input about the movie title.
 def add_movie_title():
-    movie_title = input("Name of the Movie: ").upper()
+    while True:
+        movie_title = input("Name of the Movie: ").upper()
+        if not movie_title or movie_title.isspace():
+            print("""
+            ==================================================
+            Movie title cannot be empty.
+            ==================================================
+            
+            """)
+        else:
+            break
 
     return movie_title
 
@@ -93,7 +103,7 @@ def save_movie_library(movie_library):
         ==================================================
         
         """)
-        
+
 
 #Gets the next biggest ID to append to the list.
 def next_id(movie_library):
